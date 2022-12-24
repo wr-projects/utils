@@ -1,0 +1,46 @@
+---
+name: Pipeline - Auto Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    name: Auto Sync
+    runs-on: ubuntu-latest
+    steps:
+    # More info: https://github.com/step-security/harden-runner.
+      - name: Harden Runner
+        id: harden_runner
+        uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5
+        with:
+          disable-sudo: true
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
+            github.com:443
+      # More info: https://github.com/peter-murray/workflow-application-token-action.
+      - name: Get token
+        id: get_token
+        uses: peter-murray/workflow-application-token-action@8e1ba3bf1619726336414f1014e37f17fbadf1db
+        with:
+          application_id: ${{ secrets.ID_AUTOSYNCBOT }}
+          application_private_key: ${{ secrets.PEM_AUTOSYNCBOT }}
+
+      # More info: https://github.com/actions/checkout.
+      - name: Checkout & Authentication
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
+        with:
+          token: ${{ steps.get_token.outputs.token }}
+          persist-credentials: false
+
+      # More info: https://github.com/rovast/sync-upstream-repo/.
+      - name: GitHub Sync to Upstream Repository
+        uses: repo-sync/github-sync@3832fe8e2be32372e1b3970bbae8e7079edeec88
+        with:
+          source_repo: https://github.com/wr-projects/github-jstemplate
+          source_branch: main
+          destination_branch: main
+          github_token: ${{ steps.get_token.outputs.token }}
