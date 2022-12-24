@@ -11,16 +11,6 @@ jobs:
     name: Auto Sync
     runs-on: ubuntu-latest
     steps:
-    # More info: https://github.com/step-security/harden-runner.
-      - name: Harden Runner
-        id: harden_runner
-        uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5
-        with:
-          disable-sudo: true
-          egress-policy: block
-          allowed-endpoints: >
-            api.github.com:443
-            github.com:443
       # More info: https://github.com/peter-murray/workflow-application-token-action.
       - name: Get token
         id: get_token
@@ -38,9 +28,7 @@ jobs:
 
       # More info: https://github.com/rovast/sync-upstream-repo/.
       - name: GitHub Sync to Upstream Repository
-        uses: repo-sync/github-sync@3832fe8e2be32372e1b3970bbae8e7079edeec88
+        uses: rovast/sync-upstream-repo@c90f27f86cd67d3f83899cd52311a3d739efb235
         with:
-          source_repo: https://github.com/wr-projects/github-jstemplate
-          source_branch: main
-          destination_branch: main
-          github_token: ${{ steps.get_token.outputs.token }}
+          upstream_repo: https://github.com/wr-projects/github-jstemplate
+          token: ${{ steps.get_token.outputs.token }}
