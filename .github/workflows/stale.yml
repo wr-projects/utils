@@ -1,0 +1,61 @@
+---
+name: Pipeline - Stale
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+
+  # More info:
+  stale:
+    runs-on: ubuntu-latest
+
+    steps:
+      # More info: https://github.com/step-security/harden-runner.
+      - name: Harden Runner
+        id: harden_runner
+        uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5
+        with:
+          egress-policy: audit
+
+      # More info: https://github.com/peter-murray/workflow-application-token-action.
+      - name: Get token
+        id: get_token
+        uses: peter-murray/workflow-application-token-action@8e1ba3bf1619726336414f1014e37f17fbadf1db
+        with:
+          application_id: ${{ secrets.ID_STALEBOT }}
+          application_private_key: ${{ secrets.PEM_STALEBOT }}
+
+      # More info: https://github.com/actions/checkout.
+      - name: Checkout & Authentication
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        with:
+          token: ${{ steps.get_token.outputs.token }}
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Observer INC & PRs
+        uses: actions/stale@6f05e4244c9a0b2ed3401882b05d701dd0a7289b
+        with:
+          repo-token: ${{ steps.get_token.outputs.token }}
+          days-before-stale: 30
+          days-before-close: 8
+          stale-issue-message: "The issue has been marked as stale due to inactivity. Please show activity within 8 days or it will be automatically closed."
+          stale-pr-message: "The Pull Request has been marked as stale due to inactivity. Please show activity within 8 days or it will be automatically closed."
+          close-issue-message: "The issue has been automatically closed."
+          close-pr-message: "The Pull Request has been automatically closed."
+          stale-issue-label: 'status: ⌛ automatic-stale'
+          stale-pr-label: 'status: ⌛ automatic-stale'
+          close-issue-label: 'status: ✔️ automatic-closing'
+          close-pr-label: 'status: ✔️ automatic-closing'
+          exempt-issue-labels: 'status: 🆘 new-issue,status: ⌛ awaiting-review,status: ⌛ awaiting-reply,status: ⌛ in-progress,status: ⌛ in-review,status: ⌛ in-analysis,status: ⌛ research-needed,status: ✔️ approved-review,status: 📝 discussion,status: 💡 rfc,status: ❓ question,status: 🕜 relaunch-1,status: 🕜 relaunch-2,impact: ⚠️ critical,type: 🔐 security'
+          exempt-pr-labels: 'status: 🆘 new-issue,status: ⌛ awaiting-review,status: ⌛ awaiting-reply,status: ⌛ in-progress,status: ⌛ in-review,status: ⌛ in-analysis,status: ⌛ research-needed,status: ✔️ approved-review,status: 📝 discussion,status: 💡 rfc,status: ❓ question,status: 🕜 relaunch-1,status: 🕜 relaunch-2,impact: ⚠️ critical,type: 🔐 security'
+          remove-stale-when-updated: true
+          delete-branch: false
+
+      - name: Print outputs
+        run: echo ${{ join(steps.stale.outputs.*, ',') }}

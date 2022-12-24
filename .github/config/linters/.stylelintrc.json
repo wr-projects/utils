@@ -1,0 +1,59 @@
+{
+  "rules": {
+    "color-no-invalid-hex": true,
+    "font-family-no-missing-generic-family-keyword": true,
+    "named-grid-areas-no-invalid": true,
+    "function-calc-no-unspaced-operator": true,
+    "function-linear-gradient-no-nonstandard-direction": true,
+    "string-no-newline": true,
+    "unit-no-unknown": true,
+    "custom-property-no-missing-var-function": true,
+    "keyframe-declaration-no-important": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-shorthand-property-overrides": true,
+    "block-no-empty": true,
+    "selector-pseudo-class-no-unknown": true,
+    "selector-psudo-no-element-no-unknown": true,
+    "selector-type-no-unknown": true,
+    "media-feature-name-no-unknown": true,
+    "at-rule-no-unknown": true,
+    "comment-no-empty": true,
+    "no-duplicate-at-import-rules": true,
+    "no-duplicate-selectors": true,
+    "no-empty-source": true,
+    "no-extra-semicolons": true,
+    "no-invalid-position-at-import-rules": true,
+    "function-max-empty-lines": 0,
+    "max-empty-lines": 1,
+    "selector-list-max-empty-lines": 0,
+    "value-list-max-empty-lines": 0,
+    "number-leading-zero": "never",
+    "function-comma-space-after": "always",
+    "function-parentheses-space-inside": "never",
+    "declaration-colon-space-after": "always",
+    "declaration-colon-space-before": "never",
+    "value-list-comma-newline-after": "always-multi-line",
+    "value-list-comma-space-after": "always-single-line",
+    "value-list-comma-space-before": "never",
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"]
+      }
+    ],
+    "custom-property-empty-line-before": [
+      "always",
+      {
+        "except": ["after-custom-property", "first-nested"]
+      }
+    ],
+    "declaration-empty-line-before": [
+      "always",
+      {
+        "except": ["after-declaration", "first-nested"]
+      }
+    ],
+    "block-closing-brace-empty-line-before": "never",
+    "rule-empty-line-before": ["always-multi-line"]
+  }
+}

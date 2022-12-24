@@ -1,0 +1,108 @@
+{
+    "mapping": {
+        "init": ["🎉"],
+
+        "tag": ["🔖"],
+
+        "feat": ["✨"],
+
+        "bug": ["🐛"],
+
+        "breaking": ["💥"],
+        "critical": ["🚑"],
+
+        "fix": ["🩹"],
+
+        "wip": ["🚧"],
+
+        "comment": ["📝"],
+
+        "permissions": ["🛂"],
+        "roles": ["🛂"],
+
+        "security": ["🔒"],
+        "secrets": ["🔐"],
+
+        "design": ["💄"],
+        "style": ["💄"],
+        "animations": ["🎨"],
+        "transitions": ["🎨"],
+
+        "improve": ["💎"],
+        "perf": ["🐎"],
+        "refactor": ["♻️"],
+        "accessability": ["♿"],
+
+        "desktop": ["💻"],
+        "mobile": ["📱"],
+        "responsive": ["📱💻"],
+
+        "windows": ["🏁"],
+        "macOS": ["🍎"],
+        "linux": ["🐧"],
+
+        "test": ["🧪"],
+        "adding-test": ["➕"],
+
+        "build": ["📦"],
+        "deploy": ["🚀"],
+
+        "ci": ["👷"],
+        "update-ci": ["👷"],
+
+        "dev-scripts": ["📜"],
+
+        "docs": ["📚"],
+        "documentation": ["📚"],
+
+        "internationalize": ["🌐"],
+        "i18n": ["🌐"],
+        "localisation": ["🌐"],
+
+        "metadata": ["📊"],
+
+        "lint": ["👕"],
+        "healtcheck": ["🩺"],
+        "business": ["👔"],
+        "architectural": ["🏗️"],
+        "developer": ["🧑‍💻"],
+
+        "general-update": ["⚡"],
+
+        "upgrade": ["⬆️"],
+        "downgrade": ["⬇️"],
+
+        "add": ["➕"],
+        "remove": ["🔥"],
+        "move": ["🚚"],
+        "rename": ["🚚"],
+
+        "add-dep": ["➕"],
+        "remove-dep": ["➖"],
+        "pin-dep": ["📌"],
+
+        "contributor": ["👥"],
+
+        "docker": ["🐳"],
+        "config-file": ["🔧"],
+        "pkg-file": ["📦"],
+        "analytics": ["📈"],
+        "api": ["👽"],
+        "licence": ["📄"],
+        "assets": ["🍱"],
+        "gitfile": ["✏️"],
+        "snapshots": ["📸"],
+        "experiments": ["⚗️"],
+        "seo": ["🔍️"],
+
+        "database": ["🗃️"],
+        "update-logs": ["🔊"],
+        "remove-logs": ["🔇"],
+
+        "merge-branch": ["🔀"],
+        "dead-code": ["⚰️"],
+        "bad-code": ["🗑️"],
+        "revert": ["⏪"],
+        "ok-code": ["👌"]
+    }
+}

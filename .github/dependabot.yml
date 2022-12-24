@@ -1,0 +1,22 @@
+version: 2
+
+updates:
+
+- package-ecosystem: github-actions
+  directory: ".github/workflows"
+  target-branch: "main"
+
+  schedule:
+    interval: daily
+    timezone: "Europe/Paris"
+    time: "00:00"
+
+  labels:
+    - "source: 💚 github_actions"
+    - "source: 🤖 bot"
+
+  commit-message:
+    prefix: "upgrade(ci)"
+
+  reviewers:
+    - "wr-projects/devops"

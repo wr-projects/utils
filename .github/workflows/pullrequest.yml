@@ -1,0 +1,114 @@
+---
+name: Pipeline - Pull Request
+
+on:
+  pull_request:
+    types: [ opened, reopened ]
+
+jobs:
+
+  # More info: https://github.com/GitGuardian/ggshield-action
+  gitguardian:
+    name: GitGuardian Scanner
+    runs-on: ubuntu-latest
+
+    steps:
+      # More info: https://github.com/step-security/harden-runner.
+      - name: Harden Runner
+        id: harden_runner
+        uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5
+        with:
+          disable-sudo: true
+          egress-policy: block
+          allowed-endpoints: >
+            api.gitguardian.com:443
+            github.com:443
+
+      - name: Checkout & Authentication
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: GitGuardian Scanner
+        uses: GitGuardian/gg-shield-action@a5226e0a63850e276df1c71a81129fb82fc6e8cc
+        with:
+          args: -v --all-policies
+        env:
+          GITHUB_PUSH_BEFORE_SHA: ${{ github.event.before }}
+          GITHUB_PUSH_BASE_SHA: ${{ github.event.before }}
+          GITHUB_PULL_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
+
+  # More info: https://github.com/pineapplelol/emojify-pr-title
+  emojify-pr-title:
+    runs-on: ubuntu-latest
+    needs: [gitguardian]
+
+    steps:
+      # More info: https://github.com/step-security/harden-runner.
+      - name: Harden Runner
+        id: harden_runner
+        uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5
+        with:
+          egress-policy: audit
+
+      # More info: https://github.com/peter-murray/workflow-application-token-action.
+      - name: Get token
+        id: get_token
+        uses: peter-murray/workflow-application-token-action@8e1ba3bf1619726336414f1014e37f17fbadf1db
+        with:
+          application_id: ${{ secrets.ID_EMOJIFYBOT }}
+          application_private_key: ${{ secrets.PEM_EMOJIFYBOT }}
+
+      # More info: https://github.com/actions/checkout.
+      - name: Checkout & Authentication
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        with:
+          token: ${{ steps.get_token.outputs.token }}
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Emojify PR Title
+        uses: pineapplelol/emojify-pr-title@a380b02ff04e737a60066bcd0a8c45f1f7a1a709
+        with:
+          use-fuzzy: false
+          use-emoji-map: true
+          emoji-map: 'https://raw.githubusercontent.com/wr-projects/github-template/main/.github/config/workflows/emoji_mapping.json'
+          require-space: true
+          token: ${{ steps.get_token.outputs.token }}
+
+  # More info: https://github.com/hiwelo/new-dependencies-action
+  check_new_dependencies:
+    runs-on: ubuntu-latest
+    needs: [gitguardian]
+
+    steps:
+      # More info: https://github.com/step-security/harden-runner.
+      - name: Harden Runner
+        id: harden_runner
+        uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5
+        with:
+          egress-policy: audit
+
+      # More info: https://github.com/peter-murray/workflow-application-token-action.
+      - name: Get token
+        id: get_token
+        uses: peter-murray/workflow-application-token-action@8e1ba3bf1619726336414f1014e37f17fbadf1db
+        with:
+          application_id: ${{ secrets.ID_CHECKDEPSBOT }}
+          application_private_key: ${{ secrets.PEM_CHECKDEPSBOT }}
+
+      # More info: https://github.com/actions/checkout.
+      - name: Checkout & Authentication
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        with:
+          token: ${{ steps.get_token.outputs.token }}
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Check for new dependencies
+        uses: hiwelo/new-dependencies-action@e4175e14484328f9ab56df91e420e90ad5031c08
+        with:
+          token: ${{ steps.get_token.outputs.token }}

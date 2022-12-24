@@ -1,0 +1,268 @@
+---
+- name: "status: 🆘 new-issue"
+  color: '78A5FF'
+  description: New incident not yet taken care of by a project collaborator
+
+- name: "status: 🆘 help-needed"
+  color: '78A5FF'
+  description: Issue author is asking for help
+
+- name: "status: ⌛ awaiting-review"
+  color: 'FF6D00'
+  description: PR awaiting for review
+
+- name: "status: ⌛ awaiting-reply"
+  color: 'FF6D00'
+  description: Waiting for user response
+
+- name: "status: ⌛ in-progress"
+  color: 'FF6D00'
+  description: Issue is currently worked on
+
+- name: "status: ⌛ in-review"
+  color: 'FF6D00'
+  description: Issue is currently reviewed
+
+- name: "status: ⌛ in-analysis"
+  color: 'FF6D00'
+  description: The issue is being analyzed to determine if it is a real incident
+
+- name: "status: ⌛ research-needed"
+  color: 'FF6D00'
+  description: A time of research is needed
+
+- name: "status: ❌ duplicate"
+  color: 'DD2C00'
+  description: Duplicated issue link to the issue in comments
+
+- name: "status: ❌ out-of-scope"
+  color: 'DD2C00'
+  description: Not in our working environment
+
+- name: "status: ❌ invalid"
+  color: 'DD2C00'
+  description: This issue can not be confirmed or was reported in the wrong tracker.
+
+- name: "status: ✔️ approved-review"
+  color: '00C853'
+  description: Review approved and PR ready to merge
+
+- name: "status: ✔️ incident-resolved"
+  color: '00C853'
+  description: Incident resolved by technician/user
+
+- name: "status: ✔️ automatic-closing"
+  color: '00C853'
+  description: Automatic closing due to inactivity
+
+- name: "status: 📝 discussion"
+  color: '1F1A38'
+  description: Invite to discussion of collaborators
+
+- name: "status: 💡 rfc"
+  color: '1F1A38'
+  description: Feature request
+
+- name: "status: ❓ question"
+  color: '1F1A38'
+  description: This is a general question or in the context of the resolution of the incident
+
+- name: "status: ⛔ blocked"
+  color: 'DD2C00'
+  description: Is blocked by another issue (specify which in comments)
+
+- name: "status: ⛔ blocker"
+  color: 'DD2C00'
+  description: Blocks the progress of an issue requires special attention(specify which in comments)
+
+- name: "status: 🕜 relaunch-1"
+  color: 'FF6D00'
+  description: Relaunch 1, waiting for a response from the user.
+
+- name: "status: 🕜 relaunch-2"
+  color: 'FF6D00'
+  description: Relaunch 2, waiting for a response from the user.
+
+- name: "status: 🕜 relaunch-3"
+  color: 'FF6D00'
+  description: Relaunch 3, waiting for a response from the user.
+
+- name: "impact: ⚠️ low"
+  color: 'D84315'
+  description: Non-urgent changes and future ideas
+
+- name: "impact: ⚠️ medium"
+  color: 'D84315'
+  description: Can be worked on later
+
+- name: "impact: ⚠️ high"
+  color: 'D84315'
+  description: Need to be worked on ASAP
+
+- name: "impact: ⚠️ critical"
+  color: 'D84315'
+  description: Stop all work in progress and work on this (to be used when REALLY necessary!)
+
+- name: "type: 🐛 bug"
+  color: 'DDCECD'
+  description: Confirmed bug
+
+- name: "type: 🚧 chore"
+  color: 'DDCECD'
+  description: Tedious but necessary task
+
+- name: "type: 🩺 test"
+  color: 'DDCECD'
+  description: Extensive testing needs to be done on the issue
+
+- name: "type: 💡 enhancement"
+  color: 'DDCECD'
+  description: Improvement of existing code
+
+- name: "type: 💣 big-enhancement"
+  color: 'DDCECD'
+  description: Epic improvement deserving a full release
+
+- name: "type: ⭐ feature"
+  color: 'DDCECD'
+  description: Functionnality request changes, improvements, additions, etc
+
+- name: "type: 🔐 security"
+  color: 'DDCECD'
+  description: Generally linked to the critical-priority label, it is therefore necessary to pay attention to the usage.
+
+- name: "type: ⛔ conflicts"
+  color: 'DDCECD'
+  description: Merge conflicts to be resolved by the author of the PR
+
+- name: "type: 🐎 performance"
+  color: 'DDCECD'
+  description: Change in project performance
+
+- name: "type: ♻️ refactor"
+  color: 'DDCECD'
+  description: Refactoring of the code
+
+- name: "type: 🧹 infrastructure"
+  color: 'DDCECD'
+  description: Change/Enhancements to the project infrastructure
+
+- name: "source: 🎉 ext-dependency"
+  color: 'DD99BB'
+  description: Third-party dependency problem can't fix by our own
+
+- name: "source: 🎉 dependencies"
+  color: 'DD99BB'
+  description: Pull requests that update a dependency file
+
+- name: "source: 💚 github"
+  color: 'DD99BB'
+  description: Changes for GitHub files
+
+- name: "source: 💚 github_actions"
+  color: 'DD99BB'
+  description: Changes for GitHub Actions
+
+- name: "source: 🤖 bot"
+  color: 'DD99BB'
+  description: GitHub Robots
+
+- name: "source: 🐳 docker"
+  color: 'DD99BB'
+  description: Modifications to Docker files
+
+- name: "source: 📚 docs"
+  color: 'DD99BB'
+  description: Improvements or additions to documentation
+
+- name: "source: 📚 wiki"
+  color: 'DD99BB'
+  description: Modifications to the Wiki files
+
+- name: "knowledge: 👌 good-first-issue"
+  color: 'AD5D4E'
+  description: The report contains instructions required to fix it. It is an good place for someone new to learn about the project by fixing a real issue.
+
+- name: "os: 🖥️ windows"
+  color: 'E0CA3C'
+  description: Under Windows OS
+
+- name: "os: 🍎 macos"
+  color: 'E0CA3C'
+  description: Under MacOS
+
+- name: "os: 🐧 linux"
+  color: 'E0CA3C'
+  description: Under Linux OS
+
+- name: "os: 🍎 apple"
+  color: 'E0CA3C'
+  description: Under iOs
+
+- name: "os: 🤖 android"
+  color: 'E0CA3C'
+  description: Under Android
+
+- name: "browser: 💻 chrome"
+  color: 'E4B363'
+  description: Chrome browser impacted
+
+- name: "browser: 💻 firefox"
+  color: 'E4B363'
+  description: Firefox browser impacted
+
+- name: "browser: 💻 edge"
+  color: 'E4B363'
+  description: Microsoft Edge browser impacted
+
+- name: "browser: 💻 safari"
+  color: 'E4B363'
+  description: Safari browser impacted
+
+- name: "browser: 💻 opera"
+  color: 'E4B363'
+  description: Opera browser impacted
+
+- name: "group: 👑 admin"
+  color: '7B506F'
+  description: Administrator group
+
+- name: "group: 👨‍💻 backend"
+  color: '7B506F'
+  description: Backend developers group
+
+- name: "group: 👨‍💻 devops"
+  color: '7B506F'
+  description: DevOps group
+
+- name: "group: 📝 editor"
+  color: '7B506F'
+  description: Publishers group
+
+- name: "group: 👨‍💻 frontend"
+  color: '7B506F'
+  description: Frontend developers group
+
+- name: "group: 💬 support"
+  color: '7B506F'
+  description: Support group
+
+- name: "group: 🎨 ui"
+  color: '7B506F'
+  description: Design group
+
+- name: "level: 🔰 beginner"
+  color: '4D4847'
+  description: Issue that can be resolved by beginners
+
+- name: "level: 🔰 intermediate"
+  color: '4D4847'
+  description: Issue requiring at least intermediate developers
+
+- name: "level: 🔰 advanced"
+  color: '4D4847'
+  description: Issue requiring at least advanced developers
+
+- name: "level: 🔰 expert"
+  color: '4D4847'
+  description: Issue requiring expert developers

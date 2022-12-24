@@ -1,0 +1,121 @@
+name: "🐛 Bug Report"
+description: Create a new ticket for a bug
+title: "🐛 [BUG] - <title>"
+labels: [
+  "status: 🆘 new-issue",
+  "status: 🆘 help-needed",
+  "status: ⌛ in-analysis",
+  "type: 🐛 bug",
+  "group: 💬 support"
+]
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: "Contact"
+      description: Please enter your email or your Discord username & id
+      placeholder: ex. user@example.com or username#id
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: "Version"
+      description: What is the impacted version ?
+      multiple: false
+      options:
+        - Latest
+    validations:
+      required: true
+  - type: dropdown
+    id: branches
+    attributes:
+      label: "Branch"
+      description: What is the impacted branch ?
+      multiple: true
+      options:
+        - main/
+        - development/
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Please enter an explicit description of your issue
+      placeholder: Short and explicit description of your incident...
+    validations:
+      required: true
+  - type: input
+    id: reprod-url
+    attributes:
+      label: "Reproduction URL"
+      description: Please enter your GitHub URL to provide a reproduction of the issue
+      placeholder: ex. https://github.com/USERNAME/REPO-NAME
+    validations:
+      required: true
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Reproduction steps"
+      description: Please enter an explicit description of your issue
+      value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots"
+      description: If applicable, add screenshots to help explain your problem.
+      value: |
+        ![DESCRIPTION](LINK.png)
+      render: bash
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs"
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: bash
+    validations:
+      required: false
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: "Browsers"
+      description: What browsers are you seeing the problem on ?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+    validations:
+      required: false
+  - type: dropdown
+    id: os
+    attributes:
+      label: "OS"
+      description: What is the impacted environment ?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - Mac
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/wr-projects/.github/blob/main/.github/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

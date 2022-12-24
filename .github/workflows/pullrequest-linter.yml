@@ -1,0 +1,134 @@
+name: Pipeline - Lint Pull Request
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  lint_pr:
+    name: Validate Pull Request title
+    runs-on: ubuntu-latest
+    steps:
+
+      # More info: https://github.com/step-security/harden-runner.
+      - name: Harden Runner
+        id: harden_runner
+        uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5
+        with:
+          egress-policy: audit
+
+      # More info: https://github.com/peter-murray/workflow-application-token-action.
+      - name: Get token
+        id: get_token
+        uses: peter-murray/workflow-application-token-action@8e1ba3bf1619726336414f1014e37f17fbadf1db
+        with:
+          application_id: ${{ secrets.ID_PRLINTERBOT }}
+          application_private_key: ${{ secrets.PEM_PRLINTERBOT }}
+
+      # More info: https://github.com/actions/checkout.
+      - name: Checkout & Authentication
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        with:
+          token: ${{ steps.get_token.outputs.token }}
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Validate Pull Request title
+        uses: amannn/action-semantic-pull-request@01d5fd8a8ebb9aafe902c40c53f0f4744f7381eb
+        with:
+          types: |
+            init
+            tag
+            feat
+            bug
+            breaking
+            critical
+            fix
+            wip
+            comment
+            permissions
+            roles
+            security
+            secrets
+            design
+            style
+            animations
+            transitions
+            improve
+            perf
+            refactor
+            accessability
+            desktop
+            mobile
+            responsive
+            windows
+            macOS
+            linux
+            test
+            adding-test
+            build
+            deploy
+            ci
+            update-ci
+            dev-scripts
+            docs
+            documentation
+            internationalize
+            i18n
+            localisation
+            metadata
+            lint
+            healtcheck
+            business
+            architectural
+            developer
+            general-update
+            upgrade
+            downgrade
+            add
+            remove
+            move
+            rename
+            add-dep
+            remove-dep
+            pin-dep
+            contributor
+            docker
+            config-file
+            pkg-file
+            analytics
+            api
+            licence
+            assets
+            gitfile
+            snapshots
+            experiments
+            seo
+            database
+            update-logs
+            remove-logs
+            merge-branch
+            dead-code
+            bad-code
+            revert
+            ok-code
+          scopes: |
+            # A REFLECHIR COMMENT DEFINIR LE CONTENU DE SCOPES ?
+          requireScope: true
+          disallowScopes: |
+            release
+          subjectPattern: ^(?![A-Z]).+$
+          subjectPatternError: |
+            The subject
+          ignoreLabels: |
+            source: 🤖 bot
+          headerPattern: '^(\w*)(?:\(([\w$.\-*/ ]*)\))?: (.*)$'
+          headerPatternCorrespondence: subject
+          wip: true
+          validateSingleCommit: true
+          validateSingleCommitMatchesPrTitle: true
+        env:
+          GITHUB_TOKEN: ${{ steps.get_token.outputs.token }}

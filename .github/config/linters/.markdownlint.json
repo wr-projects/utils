@@ -1,0 +1,27 @@
+{
+  "default": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": true
+  },
+  "MD001": false,
+  "MD003": "consistent",
+  "MD004": "consistent",
+  "MD005": true,
+  "MD007": 2,
+  "MD009": 2,
+  "MD010": 1,
+  "MD011": true,
+  "MD012": 1,
+  "MD013": false,
+  "MD014": true,
+  "MD018": true,
+  "MD019": false,
+  "MD020": true,
+  "MD021": true,
+  "MD022": 1,
+  "MD023": false,
+  "MD024": false,
+  "MD027": true,
+  "MD028": false,
+  "MD029": "one_or_ordered"
+}

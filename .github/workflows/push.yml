@@ -1,0 +1,69 @@
+---
+name: Pipeline - Push
+on: push
+
+jobs:
+
+  gitguardian:
+    name: GitGuardian Scanner
+    runs-on: ubuntu-latest
+
+    steps:
+      # More info: https://github.com/step-security/harden-runner.
+      - name: Harden Runner
+        id: harden_runner
+        uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5
+        with:
+          disable-sudo: true
+          egress-policy: block
+          allowed-endpoints: >
+            api.gitguardian.com:443
+            github.com:443
+
+      - name: Checkout & Authentication
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      # More info: https://github.com/GitGuardian/ggshield-action
+      - name: GitGuardian Scanner
+        uses: GitGuardian/gg-shield-action@a5226e0a63850e276df1c71a81129fb82fc6e8cc
+        with:
+          args: -v --all-policies
+        env:
+          GITHUB_PUSH_BEFORE_SHA: ${{ github.event.before }}
+          GITHUB_PUSH_BASE_SHA: ${{ github.event.before }}
+          GITHUB_PULL_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
+
+  # More info: https://github.com/marketplace/actions/anchore-sbom-action
+  sbom:
+    needs: [gitguardian]
+    name: "SBOM"
+    runs-on: ubuntu-latest
+
+    steps:
+      # More info: https://github.com/step-security/harden-runner.
+      - name: Harden Runner
+        id: harden_runner
+        uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5
+        with:
+          egress-policy: audit
+
+      - name: Downloading Syft
+        id: syft
+        uses: anchore/sbom-action/download-syft@06e109483e6aa305a2b2395eabae554e51530e1d
+
+      - name: Generate SBOM file
+        uses: anchore/sbom-action@06e109483e6aa305a2b2395eabae554e51530e1d
+        with:
+          artifact-name: sbom.spdx
+          format: spdx
+          dependency-snapshot: true
+
+      - name: Publish SBOM File
+        uses: anchore/sbom-action/publish-sbom@06e109483e6aa305a2b2395eabae554e51530e1d
+        with:
+          sbom-artifact-match: ".*\\.spdx$"

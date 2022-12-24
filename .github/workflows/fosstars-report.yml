@@ -1,0 +1,58 @@
+---
+name: Pipeline - Fosstars
+
+on:
+  push:
+    branches: [ main ]
+
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+
+  create_fosstars_report:
+
+    name: Security Rating
+    runs-on: ubuntu-latest
+    steps:
+
+      # More info: https://github.com/step-security/harden-runner.
+      - name: Harden Runner
+        id: harden_runner
+        uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5
+        with:
+          disable-sudo: true
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
+            github.com:443
+            lgtm.com:443
+            nvd.nist.gov:443
+            raw.githubusercontent.com:443
+            repo.maven.apache.org:443
+
+      # More info: https://github.com/peter-murray/workflow-application-token-action.
+      - name: Get token
+        id: get_token
+        uses: peter-murray/workflow-application-token-action@8e1ba3bf1619726336414f1014e37f17fbadf1db
+        with:
+          application_id: ${{ secrets.ID_FOSSTARSBOT }}
+          application_private_key: ${{ secrets.PEM_FOSSTARSBOT }}
+
+      # More info: https://github.com/actions/checkout.
+      - name: Checkout & Authentication
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        with:
+          token: ${{ steps.get_token.outputs.token }}
+          persist-credentials: false
+          fetch-depth: 0
+
+      # More info: https://github.com/SAP/fosstars-rating-core-action.
+      - name: Security Report
+        uses: SAP/fosstars-rating-core-action@e4c517e63155e2a6f1bff5b664cb8d027f92106e
+        with:
+          rating: security
+          report-branch: fosstars-report
+          report-file: .github/wiki/fosstars_security_rating.md
+          badge-file: .github/assets/fosstars_security_rating.svg
+          token: ${{ steps.get_token.outputs.token }}

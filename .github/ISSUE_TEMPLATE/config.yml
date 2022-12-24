@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 WebReady Projects Questions and Discussions
+    url: https://github.com/wr-projects/github-template/discussions
+    about: Please ask and answer questions here.
+  - name: 💬 Join the Discord community
+    url: https://discord.gg/B8gJqUdGtB
+    about: Come and chat with all the members of the community !
