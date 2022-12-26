@@ -1,0 +1,45 @@
+{
+  "name": "@wr-projects/eslint",
+  "version": "0.0.0",
+  "description": "A short description of the project to go in the readme",
+  "keywords": [
+    "webreadyprojects",
+    "wrprojects",
+    "opensource",
+    "2022"
+  ],
+  "homepage": "https://github.com/wr-projects/utils#README",
+  "bugs": {
+    "url": "https://github.com/wr-projects/utils/issues",
+    "email": "support@webreadyprojects.atlassian.net"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "@wr-projects <support@webreadyprojects.atlassian.net> (https://github.com/wr-projects/)"
+  },
+  "directories": {
+    "doc": "../docs",
+    "lib": "../packages/",
+    "example": "../examples"
+  },
+  "repository": {
+    "url": "wr-projects/utils.git",
+    "type": "git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "cleanup": "rimraf 'node_modules'"
+  },
+  "lint-staged": {
+    "package.json": "sort-package-json"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "sort-package-json": "^2.1.0"
+  },
+  "engines": {
+    "node": "^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  }
+}

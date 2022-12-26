@@ -1,0 +1,7 @@
+.git
+.vscode
+/dist/
+/coverage/
+/LICENSE.md
+/node_modules/
+!.*

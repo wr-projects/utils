@@ -1,0 +1,61 @@
+{
+  "name": "utils",
+  "description": "A short description of the project to go in the readme",
+  "type": "module",
+  "keywords": [
+    "webreadyprojects",
+    "wrprojects",
+    "opensource",
+    "2022"
+  ],
+  "homepage": "https://github.com/wr-projects/utils#README",
+  "bugs": {
+    "url": "https://github.com/wr-projects/utils/issues",
+    "email": "support@webreadyprojects.atlassian.net"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "@wr-projects <support@webreadyprojects.atlassian.net> (https://github.com/wr-projects/)"
+  },
+  "directories": {
+    "doc": "./docs",
+    "lib": "./packages/",
+    "example": "./examples"
+  },
+  "repository": {
+    "url": "wr-projects/utils.git",
+    "type": "git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "clean": "pnpm --parallel --stream clean",
+    "clean:core": "pnpm --filter='./packages/**' --parallel --stream clean",
+    "clean:node": "rimraf 'packages/**/node_modules' 'docs/node_modules' 'node_modules'",
+    "lint": "eslint --ext .vue,.ts,.js,.mjs,.cjs .",
+    "prepare": "husky install",
+    "typecheck": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.{vue,ts,js,mjs,cjs}": "eslint --fix",
+    "*.{json,yml,yaml,css,scss}": "prettier --write",
+    "package.json": "sort-package-json"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "engines": {
+    "node": "^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "@types/rimraf": "^3.0.2",
+    "eslint": "^8.30.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
+    "sort-package-json": "^2.1.0",
+    "typescript": "^4.9.4"
+  }
+}

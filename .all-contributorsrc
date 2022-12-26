@@ -1,6 +1,6 @@
 {
-	"projectName": "github-template",
-	"projectOwner": "wr-projects",
+	"projectName": "utils",
+	"projectOwner": "@GregoireF",
 	"repoType": "github",
 	"repoHost": "https://github.com",
 	"files": ["README.md"],
