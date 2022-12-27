@@ -1,0 +1,83 @@
+{
+  "name": "@wr-projects/commitizen",
+  "version": "0.0.1",
+  "description": "commitizen adapter for conventional commit messages with emoji",
+  "keywords": [
+    "commit",
+    "commitizen",
+    "commitzen-config",
+    "conventional-commit",
+    "adapter",
+    "angular",
+    "emoji",
+    "git",
+    "webreadyprojects",
+    "wrprojects",
+    "opensource",
+    "2022"
+  ],
+  "homepage": "https://github.com/wr-projects/utils#README",
+  "bugs": {
+    "url": "https://github.com/wr-projects/utils/issues",
+    "email": "support@webreadyprojects.atlassian.net"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "@wr-projects <support@webreadyprojects.atlassian.net> (https://github.com/wr-projects/)"
+  },
+  "main": "dist/index.js",
+  "directories": {
+    "doc": "../docs",
+    "lib": "../packages/",
+    "example": "../examples"
+  },
+  "repository": {
+    "url": "wr-projects/utils.git",
+    "type": "git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "deps": "dep-check",
+    "pkg": "pkg-check",
+    "commit": "cz",
+    "lint": "eslint ./",
+    "test": "echo \"Error: too lazy to write test\" && exit 1"
+  },
+  "lint-staged": {
+    "package.json": "sort-package-json"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.31.11",
+    "husky": "^8.0.2",
+    "prettier": "^2.8.1",
+    "pretty-quick": "^3.1.3",
+    "rimraf": "^3.0.2",
+    "sort-package-json": "^2.1.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "commitizen": "^4.2.6",
+    "word-wrap": "^1.2.3"
+  },
+  "engines": {
+    "node": "^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./dist/index.js"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  }
+}
