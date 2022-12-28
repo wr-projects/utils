@@ -1,23 +1,48 @@
-BADGES :
+# Utils
 
-https://img.shields.io/npms-io/quality-score/@webreadyprojects/github-template
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+# Welcome to the `utils` Project!
 
-# utils
-
-A short description of the project to go in the readme
+This project was initiated in order to collect shareable configurations such as [ESLint](), [Prettier](), [CommitLint](), etc. from the organization and publish most of them through NPM packages on [`@wr-projects`]()
 
 ## Getting Started
 
 
+## Contributing
 
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 
-## Support
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://www.facebook.com/profile.php?id=100009457709527"><img src="https://avatars.githubusercontent.com/u/16638358?v=4" width="100px;" alt=""/><br /><sub><b>Gregoire Favreau</b></sub></a></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td align="center" size="13px" colspan="7">
+        <img src="https://raw.githubusercontent.com/all-contributors/all-contributors-cli/1b8533af435da9854653492b1327a23a4dbd0a10/assets/logo-small.svg">
+          <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions</a>
+        </img>
+      </td>
+    </tr>
+  </tfoot>
+</table>
 
-* Mailing List: support@webreadyprojects.atlassian.net
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## Project Manager
+## Communications
 
-* @GregoireF <gfavreau.wrprojects@gmail.com>
+* Support E-mail: [Mail](support@webreadyprojects.atlassian.net)
+* Discord Channel: [Discord](https://discord.com/channels/849073103984525323/)
 
 ## License
+
+[MIT](https://github.com/wr-projects/utils/blob/main/LICENSE)
+
+## Conduct
