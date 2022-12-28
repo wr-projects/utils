@@ -1,5 +1,5 @@
 {
-  "name": "@wr-projects/commitizen",
+  "name": "@wr-projects/commitizen-config",
   "version": "0.0.1",
   "description": "commitizen adapter for conventional commit messages with emoji",
   "keywords": [
