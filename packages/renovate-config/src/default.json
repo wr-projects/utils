@@ -1,0 +1,47 @@
+{  
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Renovate configuration recommended by the WRProjects OSPO",
+  "extends": [
+    "config:base",
+    ":label(💚renovate)",
+    ":prConcurrentLimit0",
+    ":prHourlyLimit0",
+    ":prNotPending",
+    ":timezone(Europe/Paris)",
+    "schedule:nonOfficeHours"
+  ],
+  "rangeStrategy": "auto",
+  "packageRules": [
+    {
+      "enabled": false,
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions"
+    },
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "rangeStrategy": "pin",
+      "labels": [
+        "📌pindep"
+      ]
+    }
+  ],
+  "dependencyDashboard": false,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": [
+      "🔒vulnerability"
+    ]
+  },
+  "separateMajorMinor": true,
+  "rebaseWhen": "behind-base-branch",
+  "semanticCommits": "enabled",
+  "semanticCommitType": "⬆️upgrade",
+  "semanticCommitScope": "version",
+  "commitBody": "Signed-off-by: {{{gitAuthor}}}",
+  "npm": {
+    "enabled": true
+  },
+  "updateNotScheduled": true
+}
