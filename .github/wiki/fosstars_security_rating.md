@@ -1,6 +1,6 @@
 **Rating**: **BAD**
 
-**Score**: **3.22**, max score value is 10.0
+**Score**: **2.97**, max score value is 10.0
 
 **Confidence**: High (9.57, max confidence value is 10.0)
 
@@ -45,7 +45,7 @@ It used the following sub-scores:
         
 1.  **[Security awareness](#security-awareness)**: **3.0** (weight is 0.9)
     
-1.  **[Vulnerability discovery and security testing](#vulnerability-discovery-and-security-testing)**: **2.0** (weight is 0.6)
+1.  **[Vulnerability discovery and security testing](#vulnerability-discovery-and-security-testing)**: **0.0** (weight is 0.6)
     1.  **[Security testing](#security-testing)**: **4.55** (weight is 1.0)
         1.  **[Dependency testing](#dependency-testing)**: **10.0** (weight is 1.0)
             1.  **[Dependabot score](#dependabot-score)**: **10.0** (weight is 1.0)
@@ -223,7 +223,7 @@ This sub-score is based on 19 features:
 
 ### Vulnerability discovery and security testing
 
-Score: **2.0**, confidence is 9.86 (high), weight is 0.6 (medium)
+Score: **0.0**, confidence is 9.86 (high), weight is 0.6 (medium)
 
 The scores checks how security testing is done and how many vulnerabilities were recently discovered. If testing is good, and there are no recent vulnerabilities, then the score value is max. If there are vulnerabilities, then the score value is high. If testing is bad, and there are no recent vulnerabilities, then the score value is low. If there are vulnerabilities, then the score is min.
 
@@ -268,7 +268,7 @@ This sub-score is based on 1 feature:
 
 
 
-1.  **Info about vulnerabilities in the project:** Not found
+1.  **Info about vulnerabilities in the project:** 1 vulnerability, [details below](#known-vulnerabilities)
 
 
 ### Unpatched vulnerabilities
@@ -283,7 +283,7 @@ This sub-score is based on 1 feature:
 
 
 
-1.  **Info about vulnerabilities in the project:** Not found
+1.  **Info about vulnerabilities in the project:** 1 vulnerability, [details below](#known-vulnerabilities)
 
 
 ### Community commitment
@@ -624,4 +624,5 @@ This sub-score is based on 3 features:
 
 ## Known vulnerabilities
 
-No vulnerabilities found
+1.  [CVE-2021-4277](https://nvd.nist.gov/vuln/detail/CVE-2021-4277): A vulnerability, which was classified as problematic, has been found in fredsmith utils. This issue affects some unknown processing of the file screenshot_sync of the component Filename Handler. The manipulation leads to predictable from observable state. The name of the patch is dbab1b66955eeb3d76b34612b358307f5c4e3944. It is recommended to apply a patch to fix this issue. The identifier VDB-216749 was assigned to this vulnerability.
+

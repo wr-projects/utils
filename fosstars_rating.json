@@ -258,7 +258,7 @@
         }
       }
     },
-    "value" : 3.222328026583346,
+    "value" : 2.9670088776471757,
     "weight" : 1.0,
     "confidence" : 9.566989916533991,
     "usedValues" : [ {
@@ -1195,7 +1195,31 @@
           "name" : "Info about vulnerabilities in open-source project"
         },
         "vulnerabilities" : {
-          "entries" : [ ]
+          "entries" : [ {
+            "id" : "CVE-2021-4277",
+            "cvss" : {
+              "type" : "CVSS$V3",
+              "value" : 5.3,
+              "confidentialityImpact" : "LOW",
+              "integrityImpact" : "NONE",
+              "availabilityImpact" : "NONE"
+            },
+            "references" : [ {
+              "description" : "https://github.com/fredsmith/utils/commit/dbab1b66955eeb3d76b34612b358307f5c4e3944",
+              "url" : "https://github.com/fredsmith/utils/commit/dbab1b66955eeb3d76b34612b358307f5c4e3944"
+            }, {
+              "description" : "https://vuldb.com/?id.216749",
+              "url" : "https://vuldb.com/?id.216749"
+            } ],
+            "resolution" : "PATCHED",
+            "introduced" : null,
+            "fixed" : null,
+            "published" : "2022-12-25",
+            "vulnerableVersions" : [ {
+              "versionStart" : null,
+              "versionEnd" : null
+            } ]
+          } ]
         },
         "explanation" : [ ]
       } ],
@@ -1618,7 +1642,7 @@
         },
         "name" : "Assesses security testing and vulnerability discovery"
       },
-      "value" : 2.0,
+      "value" : 0.0,
       "weight" : 0.6,
       "confidence" : 9.85827664399093,
       "usedValues" : [ {
@@ -1628,7 +1652,31 @@
           "name" : "Info about vulnerabilities in open-source project"
         },
         "vulnerabilities" : {
-          "entries" : [ ]
+          "entries" : [ {
+            "id" : "CVE-2021-4277",
+            "cvss" : {
+              "type" : "CVSS$V3",
+              "value" : 5.3,
+              "confidentialityImpact" : "LOW",
+              "integrityImpact" : "NONE",
+              "availabilityImpact" : "NONE"
+            },
+            "references" : [ {
+              "description" : "https://github.com/fredsmith/utils/commit/dbab1b66955eeb3d76b34612b358307f5c4e3944",
+              "url" : "https://github.com/fredsmith/utils/commit/dbab1b66955eeb3d76b34612b358307f5c4e3944"
+            }, {
+              "description" : "https://vuldb.com/?id.216749",
+              "url" : "https://vuldb.com/?id.216749"
+            } ],
+            "resolution" : "PATCHED",
+            "introduced" : null,
+            "fixed" : null,
+            "published" : "2022-12-25",
+            "vulnerableVersions" : [ {
+              "versionStart" : null,
+              "versionEnd" : null
+            } ]
+          } ]
         },
         "explanation" : [ ]
       }, {
