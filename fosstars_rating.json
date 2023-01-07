@@ -1219,6 +1219,36 @@
               "versionStart" : null,
               "versionEnd" : null
             } ]
+          }, {
+            "id" : "CVE-2020-36634",
+            "cvss" : {
+              "type" : "CVSS$V3",
+              "value" : 5.4,
+              "confidentialityImpact" : "LOW",
+              "integrityImpact" : "LOW",
+              "availabilityImpact" : "NONE"
+            },
+            "references" : [ {
+              "description" : "https://vuldb.com/?ctiid.216882",
+              "url" : "https://vuldb.com/?ctiid.216882"
+            }, {
+              "description" : "https://github.com/indeedeng/util/commit/c0952a9db51a880e9544d9fac2a2218a6bfc9c63",
+              "url" : "https://github.com/indeedeng/util/commit/c0952a9db51a880e9544d9fac2a2218a6bfc9c63"
+            }, {
+              "description" : "https://vuldb.com/?id.216882",
+              "url" : "https://vuldb.com/?id.216882"
+            }, {
+              "description" : "https://github.com/indeedeng/util/releases/tag/published%2F1.0.34",
+              "url" : "https://github.com/indeedeng/util/releases/tag/published%2F1.0.34"
+            } ],
+            "resolution" : "PATCHED",
+            "introduced" : null,
+            "fixed" : null,
+            "published" : "2022-12-27",
+            "vulnerableVersions" : [ {
+              "versionStart" : null,
+              "versionEnd" : null
+            } ]
           } ]
         },
         "explanation" : [ ]
@@ -1672,6 +1702,36 @@
             "introduced" : null,
             "fixed" : null,
             "published" : "2022-12-25",
+            "vulnerableVersions" : [ {
+              "versionStart" : null,
+              "versionEnd" : null
+            } ]
+          }, {
+            "id" : "CVE-2020-36634",
+            "cvss" : {
+              "type" : "CVSS$V3",
+              "value" : 5.4,
+              "confidentialityImpact" : "LOW",
+              "integrityImpact" : "LOW",
+              "availabilityImpact" : "NONE"
+            },
+            "references" : [ {
+              "description" : "https://vuldb.com/?ctiid.216882",
+              "url" : "https://vuldb.com/?ctiid.216882"
+            }, {
+              "description" : "https://github.com/indeedeng/util/commit/c0952a9db51a880e9544d9fac2a2218a6bfc9c63",
+              "url" : "https://github.com/indeedeng/util/commit/c0952a9db51a880e9544d9fac2a2218a6bfc9c63"
+            }, {
+              "description" : "https://vuldb.com/?id.216882",
+              "url" : "https://vuldb.com/?id.216882"
+            }, {
+              "description" : "https://github.com/indeedeng/util/releases/tag/published%2F1.0.34",
+              "url" : "https://github.com/indeedeng/util/releases/tag/published%2F1.0.34"
+            } ],
+            "resolution" : "PATCHED",
+            "introduced" : null,
+            "fixed" : null,
+            "published" : "2022-12-27",
             "vulnerableVersions" : [ {
               "versionStart" : null,
               "versionEnd" : null

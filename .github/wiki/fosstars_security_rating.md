@@ -268,7 +268,7 @@ This sub-score is based on 1 feature:
 
 
 
-1.  **Info about vulnerabilities in the project:** 1 vulnerability, [details below](#known-vulnerabilities)
+1.  **Info about vulnerabilities in the project:** 2 vulnerabilities, [details below](#known-vulnerabilities)
 
 
 ### Unpatched vulnerabilities
@@ -283,7 +283,7 @@ This sub-score is based on 1 feature:
 
 
 
-1.  **Info about vulnerabilities in the project:** 1 vulnerability, [details below](#known-vulnerabilities)
+1.  **Info about vulnerabilities in the project:** 2 vulnerabilities, [details below](#known-vulnerabilities)
 
 
 ### Community commitment
@@ -625,4 +625,5 @@ This sub-score is based on 3 features:
 ## Known vulnerabilities
 
 1.  [CVE-2021-4277](https://nvd.nist.gov/vuln/detail/CVE-2021-4277): A vulnerability, which was classified as problematic, has been found in fredsmith utils. This issue affects some unknown processing of the file screenshot_sync of the component Filename Handler. The manipulation leads to predictable from observable state. The name of the patch is dbab1b66955eeb3d76b34612b358307f5c4e3944. It is recommended to apply a patch to fix this issue. The identifier VDB-216749 was assigned to this vulnerability.
+1.  [CVE-2020-36634](https://nvd.nist.gov/vuln/detail/CVE-2020-36634): A vulnerability classified as problematic has been found in Indeed Engineering util up to 1.0.33. Affected is the function visit/appendTo of the file varexport/src/main/java/com/indeed/util/varexport/servlet/ViewExportedVariablesServlet.java. The manipulation leads to cross site scripting. It is possible to launch the attack remotely. Upgrading to version 1.0.34 is able to address this issue. The name of the patch is c0952a9db51a880e9544d9fac2a2218a6bfc9c63. It is recommended to upgrade the affected component. VDB-216882 is the identifier assigned to this vulnerability.
 
