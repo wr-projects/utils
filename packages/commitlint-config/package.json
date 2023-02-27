@@ -9,10 +9,14 @@
     "angular",
     "emoji",
     "git",
+    "configuration",
+    "configuration-shareable",
+    "shareable",
+    "config",
     "webreadyprojects",
     "wrprojects",
     "opensource",
-    "2022"
+    "2023"
   ],
   "homepage": "https://github.com/wr-projects/utils#README",
   "bugs": {
