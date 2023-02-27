@@ -1,5 +1,27 @@
-# Welcome to the `@wr-projects/commitizen`
+# 👋 Welcome to the `@wr-projects/commitizen-config`
 
+[![Discord](https://img.shields.io/badge/Discord-5865F2)]()
+[![Maintainer](https://img.shields.io/badge/Maintainer-WRProjects-7F187F)]()
+![./LICENSE](https://img.shields.io/github/license/wr-projects/github-template)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5323bd08dd3f4dbd91a9d889847ba2b3)](https://www.codacy.com/gh/wr-projects/github-template/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=wr-projects/github-template&amp;utm_campaign=Badge_Grade)
+![https://lift.sonatype.com/](https://lift.sonatype.com/api/badge/github.com/wr-projects/github-template)
+[![](https://img.shields.io/lgtm/alerts/g/wr-projects/github-template.svg?logo=lgtm&logoWidth=18)]()
+
+## Table Of Contents
+- [About the project](#about-the-project)
+- [Setup](#setup)
+  - [Globally](#globally)
+  - [Locally](#locally)
+- [Examples](#examples)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Code Of Conduct](#code-of-conduct)
+- [How to contribute ?](#how-to-contribute)
+- [Contributors](#contributors)
+- [Project Owner](#project-owner)
+- [Follow us](#follow-us)
+- [License](#license)
 
 ## About the project 
 
@@ -11,52 +33,74 @@ Colorful emojis makes it easy for you to skim through commit log and find certai
 
 This commitizen adapter basically works same to [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog).
 
-## Getting Started
+## Setup
 
-In order to use, install `commitizen` and `@wr-projects/commitizen`. Then, just add below to your `package.json`
+### Globally
+```sh
+pnpm install commitizen @wr-projects/commitizen-config
 
-```json
-    "config": {
-        "commitizen": {
-            "path": "node_modules/X"
-        }
-    },
+# set as default adapter for your projects
+echo '{ "path": "@wr-projects/commitizen-config" }' > ~/.czrc
 ```
 
-## Contributing
+### Locally
+```sh
+pnpm install --save-dev commitizen @wr-projects/commitizen-config
+```
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
+## Examples
+```sh
+? Select the type of change you are committing: (Use arrow keys)
+❯ Initial Commit        🎉   Begin a project. 
+  Creation of version   🔖   Begin a project.
+  Features              ✨   Introduce new features.
+  Bug                   🐛   Fix a bug.
+  Hotfix                🚑   Critical hotfix.
+```
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center"><a href="https://www.facebook.com/profile.php?id=100009457709527"><img src="https://avatars.githubusercontent.com/u/16638358?v=4" width="100px;" alt=""/><br /><sub><b>Gregoire Favreau</b></sub></a></td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td align="center" size="13px" colspan="7">
-        <img src="https://raw.githubusercontent.com/all-contributors/all-contributors-cli/1b8533af435da9854653492b1327a23a4dbd0a10/assets/logo-small.svg">
-          <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions</a>
-        </img>
-      </td>
-    </tr>
-  </tfoot>
-</table>
+## Configuration
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+In order to use, install `commitizen` and `@wr-projects/commitizen-config`. Then, just add below to your `package.json`
 
-## Communications
+```json
+"config": {
+  "commitizen": {
+    "path": "@wr-projects/commitizen-config"
+  }
+},
+```
+
+## Usage
+
+```sh
+$ git cz
+```
+
+## Code Of Conduct
+
+Please read the [Code Of Conduct](https://github.com/wr-projects/utils/blob/main/.github/wiki/CODE_OF_CONDUCT.md) before interacting with the project.
+
+## How to contribute ?
+
+In your case, to start contributing, please fork [`@wr-projects/utils`](https://github.com/wr-projects/utils/fork) and start working on your part.
+Later, feel free to contribute a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork), we will be pleased to review it with you.
+
+## Contributors
+
+
+
+## Project Owner
+
+| [![Grégoire FAVREAU](https://github.com/GregoireF.png?size=100)](https://github.com/GregoireF) |
+| -------------------------------------------------- |
+| [Grégoire FAVREAU](https://github.com/GregoireF)                                          |
+
+## Follow us
 
 * Support E-mail: [Mail](support@webreadyprojects.atlassian.net)
 * Discord Channel: [Discord](https://discord.com/channels/849073103984525323/)
 
 ## License
+[MIT LICENSE](https://github.com/wr-projects/utils/blob/main/packages/commitizen-config/LICENSE)
 
-
-## Conduct
-
+Copyright (c) [WRProjects Community](https://github.com/wr-projects)
