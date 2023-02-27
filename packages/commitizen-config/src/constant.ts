@@ -20,8 +20,8 @@ export const types = {
       emoji: "🐛",
     },
     breaking: {
-      description: "",
-      title: "",
+      description: "Create broken code",
+      title: "Break",
       emoji: "💥",
     },
     critical: {
