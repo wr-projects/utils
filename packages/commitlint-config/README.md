@@ -27,7 +27,7 @@
     - [body-leading-blank](#body-leading-blank)
     - [footer-leading-blank](#footer-leading-blank)
 - [Code Of Conduct](#code-of-conduct)
-- [How to contribute ?](#how-to-contribute)
+- [How to contribute ?](#how-to-contribute-)
 - [Contributors](#contributors)
 - [Project Owner](#project-owner)
 - [Follow us](#follow-us)
