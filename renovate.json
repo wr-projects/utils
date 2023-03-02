@@ -1,5 +1,5 @@
 {
     "extends": [
-        "github>wr-projects/utils//packages//renovate-config//src/default"
+        "github>wr-projects/renovate-config-wrprojects"
     ]
 }
