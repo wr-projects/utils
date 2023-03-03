@@ -12,7 +12,7 @@ jobs:
     steps:
 
     - name: Publish if version has been updated
-      uses: wtrocki/npm-publish-monorepo-action@
+      uses: wtrocki/npm-publish-monorepo-action@2cdbff36b845228be9319df43c0de9f0752f8550
       with:
         workspace: "./packages"
         versionFrom: "."
