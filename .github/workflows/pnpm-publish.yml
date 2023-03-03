@@ -1,0 +1,25 @@
+name: Pipeline - PNPM Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  npm-punlish:
+    name: PNPM Publish
+    runs-on: ubuntu-latest 
+    steps:
+
+    - name: Publish if version has been updated
+      uses: wtrocki/npm-publish-monorepo-action@
+      with:
+        workspace: "./packages"
+        versionFrom: "."
+        tag_name: "v%s"
+        tag_message: "v%s"
+        create_tag: "true"
+        commit_pattern: "🔖 tag(create): Release (\\S+)"
+        publish_args: "--non-interactive --dry-run"
+      env:
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

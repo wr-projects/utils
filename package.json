@@ -1,5 +1,6 @@
 {
   "name": "utils",
+  "version": "0.0.1",
   "description": "A short description of the project to go in the readme",
   "type": "module",
   "keywords": [
