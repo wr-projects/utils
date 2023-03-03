@@ -11,15 +11,31 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
 
-    - name: Publish if version has been updated
-      uses: wtrocki/npm-publish-monorepo-action@2cdbff36b845228be9319df43c0de9f0752f8550
-      with:
-        workspace: "./packages"
-        versionFrom: "."
-        tag_name: "v%s"
-        tag_message: "v%s"
-        create_tag: "true"
-        commit_pattern: "🔖 tag(create): Release (\\S+)"
-        publish_args: "--non-interactive --dry-run"
-      env:
-        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+    # More info: https://github.com/step-security/harden-runner.
+      - name: Harden Runner
+        id: harden_runner
+        uses: step-security/harden-runner@ebacdc22ef6c2cfb85ee5ded8f2e640f4c776dd5
+        with:
+          egress-policy: audit
+
+
+      # More info: https://github.com/actions/checkout.
+      - name: Checkout & Authentication
+        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        with:
+          token: ${{ steps.get_token.outputs.token }}
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Publish if version has been updated
+        uses: wtrocki/npm-publish-monorepo-action@2.0.0
+        with:
+          workspace: "./packages"
+          versionFrom: "."
+          tag_name: "v%s"
+          tag_message: "v%s"
+          create_tag: "true"
+          commit_pattern: "🔖 tag(create): Release (\\S+)"
+          publish_args: "--non-interactive --dry-run"
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
