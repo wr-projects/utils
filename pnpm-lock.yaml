@@ -9,7 +9,7 @@ importers:
       eslint: ^8.30.0
       husky: ^8.0.3
       lint-staged: ^13.1.0
-      prettier: ^2.8.1
+      prettier: ^2.8.6
       rimraf: ^3.0.2
       sort-package-json: ^2.1.0
       typescript: ^4.9.5
@@ -19,7 +19,7 @@ importers:
       eslint: 8.30.0
       husky: 8.0.3
       lint-staged: 13.1.0
-      prettier: 2.8.1
+      prettier: 2.8.6
       rimraf: 3.0.2
       sort-package-json: 2.1.0
       typescript: 4.9.5
@@ -35,7 +35,7 @@ importers:
       eslint-plugin-import: ^2.26.0
       eslint-plugin-react: ^7.31.11
       husky: ^8.0.3
-      prettier: ^2.8.1
+      prettier: ^2.8.6
       pretty-quick: ^3.1.3
       rimraf: ^3.0.2
       sort-package-json: ^2.1.0
@@ -53,8 +53,8 @@ importers:
       eslint-plugin-import: 2.26.0_smw3o7qjeokkcohbvp7rylsoqq
       eslint-plugin-react: 7.31.11_eslint@8.30.0
       husky: 8.0.3
-      prettier: 2.8.1
-      pretty-quick: 3.1.3_prettier@2.8.1
+      prettier: 2.8.6
+      pretty-quick: 3.1.3_prettier@2.8.6
       rimraf: 3.0.2
       sort-package-json: 2.1.0
       typescript: 4.9.5
@@ -2898,13 +2898,13 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier/2.8.1:
-    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
+  /prettier/2.8.6:
+    resolution: {integrity: sha512-mtuzdiBbHwPEgl7NxWlqOkithPyp4VN93V7VeHVWBF+ad3I5avc0RVDT4oImXQy9H/AqxA2NSQH8pSxHW6FYbQ==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
 
-  /pretty-quick/3.1.3_prettier@2.8.1:
+  /pretty-quick/3.1.3_prettier@2.8.6:
     resolution: {integrity: sha512-kOCi2FJabvuh1as9enxYmrnBC6tVMoVOenMaBqRfsvBHB0cbpYHjdQEpSglpASDFEXVwplpcGR4CLEaisYAFcA==}
     engines: {node: '>=10.13'}
     hasBin: true
@@ -2917,7 +2917,7 @@ packages:
       ignore: 5.2.4
       mri: 1.2.0
       multimatch: 4.0.0
-      prettier: 2.8.1
+      prettier: 2.8.6
     dev: true
 
   /prop-types/15.8.1:
