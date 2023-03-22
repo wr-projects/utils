@@ -33,7 +33,7 @@
     "clean:core": "pnpm --filter='./packages/**' --parallel --stream clean",
     "clean:node": "rimraf 'packages/**/node_modules' 'docs/node_modules' 'node_modules'",
     "lint": "eslint --ext .vue,.ts,.js,.mjs,.cjs .",
-    "prepare": "husky install",
+    "prepare": "husky install .github/.husky",
     "typecheck": "tsc --noEmit"
   },
   "lint-staged": {
