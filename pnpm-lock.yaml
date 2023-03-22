@@ -61,9 +61,9 @@ importers:
 
   packages/commitlint-config:
     specifiers:
-      '@commitlint/config-conventional': ^17.3.0
-      '@commitlint/format': ^17.0.0
-      '@commitlint/lint': ^17.3.0
+      '@commitlint/config-conventional': ^17.4.4
+      '@commitlint/format': ^17.4.4
+      '@commitlint/lint': ^17.4.4
       '@commitlint/utils': ^8.3.6
       sort-package-json: ^2.1.0
     dependencies:
