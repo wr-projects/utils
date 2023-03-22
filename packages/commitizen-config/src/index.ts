@@ -1,4 +1,5 @@
-import { green, red } from "chalk";
+//import { green, red } from "chalk";
+import chalk from 'chalk';
 import { configLoader } from "commitizen";
 import wrap from "word-wrap";
 
@@ -127,8 +128,8 @@ export const prompter = (
         );
         const color =
           filteredSubject.length <= maxSummaryLength(options, answers)
-            ? green
-            : red;
+            ? chalk.green
+            : chalk.red;
         return color("(" + filteredSubject.length + ") " + subject);
       },
       filter(subject: string) {
