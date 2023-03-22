@@ -1,6 +1,6 @@
 {
   "name": "@wr-projects/commitizen-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "commitizen adapter for conventional commit messages with emoji",
   "keywords": [
     "commit",
@@ -29,7 +29,7 @@
   "author": {
     "name": "@wr-projects <support@webreadyprojects.atlassian.net> (https://github.com/wr-projects/)"
   },
-  "main": "dist/index.js",
+  "main": "packages/commitizen-config/dist/index.js",
   "directories": {
     "doc": "../docs",
     "lib": "../packages/",
@@ -76,7 +76,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./dist/index.js"
+      "path": "packages/commitizen-config/dist/index.js"
     }
   },
   "husky": {
