@@ -11,7 +11,7 @@ importers:
       lint-staged: ^13.2.0
       prettier: ^2.8.6
       rimraf: ^3.0.2
-      sort-package-json: ^2.1.0
+      sort-package-json: ^2.4.1
       typescript: ^4.9.5
     devDependencies:
       '@types/node': 18.15.5
@@ -21,7 +21,7 @@ importers:
       lint-staged: 13.2.0
       prettier: 2.8.6
       rimraf: 3.0.2
-      sort-package-json: 2.1.0
+      sort-package-json: 2.4.1
       typescript: 4.9.5
 
   packages/commitizen-config:
@@ -29,7 +29,7 @@ importers:
       '@types/node': ^18.15.5
       '@typescript-eslint/eslint-plugin': ^5.47.1
       '@typescript-eslint/parser': ^5.47.1
-      chalk: 4.1.2
+      chalk: 5.2.0
       commitizen: ^4.3.0
       eslint: ^8.36.0
       eslint-plugin-import: ^2.27.5
@@ -38,7 +38,7 @@ importers:
       prettier: ^2.8.6
       pretty-quick: ^3.1.3
       rimraf: ^3.0.2
-      sort-package-json: ^2.1.0
+      sort-package-json: ^2.4.1
       typescript: ^4.9.5
       word-wrap: ^1.2.3
     dependencies:
@@ -48,7 +48,7 @@ importers:
       '@types/node': 18.15.5
       '@typescript-eslint/eslint-plugin': 5.47.1_4mbojvlazoeafasypewc2nvxmi
       '@typescript-eslint/parser': 5.47.1_vgl77cfdswitgr47lm5swmv43m
-      chalk: 4.1.2
+      chalk: 5.2.0
       eslint: 8.36.0
       eslint-plugin-import: 2.27.5_ypfg24ji7pszmwholi757okd54
       eslint-plugin-react: 7.32.2_eslint@8.36.0
@@ -56,7 +56,7 @@ importers:
       prettier: 2.8.6
       pretty-quick: 3.1.3_prettier@2.8.6
       rimraf: 3.0.2
-      sort-package-json: 2.1.0
+      sort-package-json: 2.4.1
       typescript: 4.9.5
 
   packages/commitlint-config:
@@ -65,14 +65,14 @@ importers:
       '@commitlint/format': ^17.4.4
       '@commitlint/lint': ^17.4.4
       '@commitlint/utils': ^8.3.6
-      sort-package-json: ^2.1.0
+      sort-package-json: ^2.4.1
     dependencies:
       '@commitlint/config-conventional': 17.4.4
       '@commitlint/format': 17.4.4
     devDependencies:
       '@commitlint/lint': 17.4.4
       '@commitlint/utils': 8.3.6
-      sort-package-json: 2.1.0
+      sort-package-json: 2.4.1
 
 packages:
 
@@ -3255,8 +3255,8 @@ packages:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
     dev: true
 
-  /sort-package-json/2.1.0:
-    resolution: {integrity: sha512-M5ctkdnn7znAkoVQJ0Y+PHDUieyXMhydPyW7r2J9ZM0Iwc3BTyEf5cmoSRfHNo07FEvzWwnphcP7GlrAX164UQ==}
+  /sort-package-json/2.4.1:
+    resolution: {integrity: sha512-Nd3rgLBJcZ4iw7tpuOhwBupG6SvUDU0Fy1cZGAMorA2JmDUb+29Dg5phJK9gapa2Ak9d15w/RuMl/viwX+nKwQ==}
     hasBin: true
     dependencies:
       detect-indent: 7.0.1
