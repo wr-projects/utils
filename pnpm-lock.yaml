@@ -42,8 +42,8 @@ importers:
         specifier: ^4.3.0
         version: 4.3.0
       word-wrap:
-        specifier: ^1.2.4
-        version: 1.2.4
+        specifier: ^1.2.5
+        version: 1.2.5
     devDependencies:
       '@types/node':
         specifier: ^18.16.20
@@ -1113,7 +1113,7 @@ packages:
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
-      word-wrap: 1.2.4
+      word-wrap: 1.2.5
     optionalDependencies:
       '@commitlint/load': 17.3.0
     transitivePeerDependencies:
@@ -3665,8 +3665,8 @@ packages:
       isexe: 2.0.0
     dev: true
 
-  /word-wrap@1.2.4:
-    resolution: {integrity: sha512-2V81OA4ugVo5pRo46hAoD2ivUJx8jXmWXfUkY4KFNw0hEptvN0QfH3K4nHiwzGeKl5rFKedV48QVoqYavy4YpA==}
+  /word-wrap@1.2.5:
+    resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
     dev: false
 
