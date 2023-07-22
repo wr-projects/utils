@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@types/node':
-        specifier: ^18.16.20
-        version: 18.16.20
+        specifier: ^18.17.0
+        version: 18.17.0
       '@types/rimraf':
         specifier: ^3.0.2
         version: 3.0.2
@@ -46,8 +46,8 @@ importers:
         version: 1.2.5
     devDependencies:
       '@types/node':
-        specifier: ^18.16.20
-        version: 18.16.20
+        specifier: ^18.17.0
+        version: 18.17.0
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.62.0
         version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.45.0)(typescript@4.9.5)
@@ -206,7 +206,7 @@ packages:
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
       resolve-from: 5.0.0
-      ts-node: 10.9.1(@types/node@18.16.20)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@18.17.0)(typescript@4.9.5)
       typescript: 4.9.5
     transitivePeerDependencies:
       - '@swc/core'
@@ -425,7 +425,7 @@ packages:
     resolution: {integrity: sha512-l6NQsDDyQUVeoTynNpC9uRvCUint/gSUXQA2euwmTuWGvPY5LSDUu6tkCtJB2SvGQlJQzLaKqcGZP4//7EDveA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 18.16.20
+      '@types/node': 18.17.0
     dev: true
 
   /@types/json-schema@7.0.11:
@@ -453,8 +453,8 @@ packages:
     dev: false
     optional: true
 
-  /@types/node@18.16.20:
-    resolution: {integrity: sha512-nL54VfDjThdP2UXJXZao5wp76CDiDw4zSRO8d4Tk7UgDqNKGKVEQB0/t3ti63NS+YNNkIQDvwEAF04BO+WYu7Q==}
+  /@types/node@18.17.0:
+    resolution: {integrity: sha512-GXZxEtOxYGFchyUzxvKI14iff9KZ2DI+A6a37o6EQevtg6uO9t+aUZKcaC1Te5Ng1OnLM7K9NVVj+FbecD9cJg==}
 
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -469,7 +469,7 @@ packages:
     resolution: {integrity: sha512-F3OznnSLAUxFrCEu/L5PY8+ny8DtcFRjx7fZZ9bycvXRi3KPTRS9HOitGZwvPg0juRhXFWIeKX58cnX5YqLohQ==}
     dependencies:
       '@types/glob': 8.0.0
-      '@types/node': 18.16.20
+      '@types/node': 18.17.0
     dev: true
 
   /@types/semver@7.3.13:
@@ -1047,7 +1047,7 @@ packages:
     dependencies:
       '@types/node': 14.18.36
       cosmiconfig: 7.1.0
-      ts-node: 10.9.1(@types/node@18.16.20)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@18.17.0)(typescript@4.9.5)
       typescript: 4.9.5
     dev: false
     optional: true
@@ -3507,7 +3507,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-node@10.9.1(@types/node@18.16.20)(typescript@4.9.5):
+  /ts-node@10.9.1(@types/node@18.17.0)(typescript@4.9.5):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -3526,7 +3526,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 18.16.20
+      '@types/node': 18.17.0
       acorn: 8.9.0
       acorn-walk: 8.2.0
       arg: 4.1.3
