@@ -37,7 +37,7 @@ jobs:
 
       # More info: https://github.com/hmarr/auto-approve-action.
       - name: Autoapprove
-        uses: hmarr/auto-approve-action@de8ae18c173c131e182d4adf2c874d8d2308a85b
+        uses: hmarr/auto-approve-action@f0939ea97e9205ef24d872e76833fa908a770363
         with:
           github-token: ${{ steps.get_token.outputs.token }}
           review-message: "Auto approved automated PR"
