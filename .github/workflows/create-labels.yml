@@ -39,7 +39,7 @@ jobs:
           fetch-depth: 0
 
       - name: Creation de labels
-        uses: EndBug/label-sync@da00f2c11fdb78e4fae44adac2fdd713778ea3e8
+        uses: EndBug/label-sync@52074158190acb45f3077f9099fea818aa43f97a
         with:
           delete-other-labels: true
           config-file: 'https://raw.githubusercontent.com/wr-projects/github-template/main/.github/config/workflows/create-labels.yml'
