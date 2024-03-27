@@ -31,7 +31,7 @@ jobs:
           fetch-depth: 0
 
       - name: GitGuardian Scanner
-        uses: GitGuardian/gg-shield-action@a5226e0a63850e276df1c71a81129fb82fc6e8cc
+        uses: GitGuardian/gg-shield-action@3af6bd67c964cffe01a0f8f5c0dd04b8cda99e6b
         with:
           args: -v --all-policies
         env:
