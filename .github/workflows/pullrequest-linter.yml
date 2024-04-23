@@ -37,7 +37,7 @@ jobs:
           fetch-depth: 0
 
       - name: Validate Pull Request title
-        uses: amannn/action-semantic-pull-request@01d5fd8a8ebb9aafe902c40c53f0f4744f7381eb
+        uses: amannn/action-semantic-pull-request@c24d6dd07c69e0826c52021944f216b2e3192535
         with:
           types: |
             init
