@@ -30,8 +30,8 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2
       sort-package-json:
-        specifier: ^2.8.0
-        version: 2.8.0
+        specifier: ^2.10.0
+        version: 2.10.0
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
@@ -79,8 +79,8 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2
       sort-package-json:
-        specifier: ^2.8.0
-        version: 2.8.0
+        specifier: ^2.10.0
+        version: 2.10.0
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
@@ -101,8 +101,8 @@ importers:
         specifier: ^8.3.6
         version: 8.3.6
       sort-package-json:
-        specifier: ^2.8.0
-        version: 2.8.0
+        specifier: ^2.10.0
+        version: 2.10.0
 
 packages:
 
@@ -3493,6 +3493,14 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
+  /semver@7.6.0:
+    resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: true
+
   /set-function-length@1.2.1:
     resolution: {integrity: sha512-j4t6ccc+VsKwYHso+kElc5neZpjtq9EnRICFZtWyBsLojhmeF/ZBd/elqm22WJh/BziDe/SBiOeAt0m2mfLD0g==}
     engines: {node: '>= 0.4'}
@@ -3572,8 +3580,8 @@ packages:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
     dev: true
 
-  /sort-package-json@2.8.0:
-    resolution: {integrity: sha512-PxeNg93bTJWmDGnu0HADDucoxfFiKkIr73Kv85EBThlI1YQPdc0XovBgg2llD0iABZbu2SlKo8ntGmOP9wOj/g==}
+  /sort-package-json@2.10.0:
+    resolution: {integrity: sha512-MYecfvObMwJjjJskhxYfuOADkXp1ZMMnCFC8yhp+9HDsk7HhR336hd7eiBs96lTXfiqmUNI+WQCeCMRBhl251g==}
     hasBin: true
     dependencies:
       detect-indent: 7.0.1
@@ -3582,6 +3590,7 @@ packages:
       git-hooks-list: 3.0.0
       globby: 13.1.3
       is-plain-obj: 4.1.0
+      semver: 7.6.0
       sort-object-keys: 1.1.3
     dev: true
 
