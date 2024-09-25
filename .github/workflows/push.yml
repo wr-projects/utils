@@ -21,7 +21,7 @@ jobs:
             github.com:443
 
       - name: Checkout & Authentication
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
         with:
           persist-credentials: false
           fetch-depth: 0
