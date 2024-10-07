@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@types/node':
-        specifier: ^18.19.54
-        version: 18.19.54
+        specifier: ^18.19.55
+        version: 18.19.55
       '@types/rimraf':
         specifier: ^3.0.2
         version: 3.0.2
@@ -46,8 +46,8 @@ importers:
         version: 1.2.5
     devDependencies:
       '@types/node':
-        specifier: ^18.19.54
-        version: 18.19.54
+        specifier: ^18.19.55
+        version: 18.19.55
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.62.0
         version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.57.1)(typescript@4.9.5)
@@ -208,7 +208,7 @@ packages:
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
       resolve-from: 5.0.0
-      ts-node: 10.9.1(@types/node@18.19.54)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@18.19.55)(typescript@4.9.5)
       typescript: 4.9.5
     transitivePeerDependencies:
       - '@swc/core'
@@ -447,7 +447,7 @@ packages:
     resolution: {integrity: sha512-l6NQsDDyQUVeoTynNpC9uRvCUint/gSUXQA2euwmTuWGvPY5LSDUu6tkCtJB2SvGQlJQzLaKqcGZP4//7EDveA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 18.19.54
+      '@types/node': 18.19.55
     dev: true
 
   /@types/json-schema@7.0.11:
@@ -472,8 +472,8 @@ packages:
     dev: false
     optional: true
 
-  /@types/node@18.19.54:
-    resolution: {integrity: sha512-+BRgt0G5gYjTvdLac9sIeE0iZcJxi4Jc4PV5EUzqi+88jmQLr+fRZdv2tCTV7IHKSGxM6SaLoOXQWWUiLUItMw==}
+  /@types/node@18.19.55:
+    resolution: {integrity: sha512-zzw5Vw52205Zr/nmErSEkN5FLqXPuKX/k5d1D7RKHATGqU7y6YfX9QxZraUzUrFGqH6XzOzG196BC35ltJC4Cw==}
     dependencies:
       undici-types: 5.26.5
 
@@ -491,7 +491,7 @@ packages:
     resolution: {integrity: sha512-F3OznnSLAUxFrCEu/L5PY8+ny8DtcFRjx7fZZ9bycvXRi3KPTRS9HOitGZwvPg0juRhXFWIeKX58cnX5YqLohQ==}
     dependencies:
       '@types/glob': 8.0.0
-      '@types/node': 18.19.54
+      '@types/node': 18.19.55
     dev: true
 
   /@types/semver@7.3.13:
@@ -1098,7 +1098,7 @@ packages:
     dependencies:
       '@types/node': 14.18.36
       cosmiconfig: 7.1.0
-      ts-node: 10.9.1(@types/node@18.19.54)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@18.19.55)(typescript@4.9.5)
       typescript: 4.9.5
     dev: false
     optional: true
@@ -3852,7 +3852,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-node@10.9.1(@types/node@18.19.54)(typescript@4.9.5):
+  /ts-node@10.9.1(@types/node@18.19.55)(typescript@4.9.5):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     requiresBuild: true
@@ -3872,7 +3872,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 18.19.54
+      '@types/node': 18.19.55
       acorn: 8.9.0
       acorn-walk: 8.2.0
       arg: 4.1.3
