@@ -31,7 +31,7 @@ jobs:
 
       # More info: https://github.com/actions/checkout.
       - name: Checkout & Authentication
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
         with:
           token: ${{ steps.get_token.outputs.token }}
           persist-credentials: false
