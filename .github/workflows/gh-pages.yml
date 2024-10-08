@@ -44,7 +44,7 @@ jobs:
         run: corepack enable
 
       - name: Use Node.js v16
-        uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6
         with:
           node-version: 16.10.0
           cache: pnpm
