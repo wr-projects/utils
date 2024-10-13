@@ -39,7 +39,7 @@ jobs:
       # More info: https://github.com/peter-murray/workflow-application-token-action.
       - name: Get token
         id: get_token
-        uses: peter-murray/workflow-application-token-action@8e1ba3bf1619726336414f1014e37f17fbadf1db
+        uses: peter-murray/workflow-application-token-action@baa1ef2638c3d9e5967b7c8b86219f8fc919e1bb
         with:
           application_id: ${{ secrets.ID_CHECKDEPSBOT }}
           application_private_key: ${{ secrets.PEM_CHECKDEPSBOT }}
