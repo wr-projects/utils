@@ -14,7 +14,7 @@ jobs:
       # More info: https://github.com/peter-murray/workflow-application-token-action.
       - name: Get token
         id: get_token
-        uses: peter-murray/workflow-application-token-action@8e1ba3bf1619726336414f1014e37f17fbadf1db
+        uses: peter-murray/workflow-application-token-action@8e4e6fbf6fcc8a272781d97597969d21b3812974
         with:
           application_id: ${{ secrets.ID_AUTOSYNCHROBOT }}
           application_private_key: ${{ secrets.PEM_AUTOSYNCHROBOT }}
