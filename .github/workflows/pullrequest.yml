@@ -25,7 +25,7 @@ jobs:
             github.com:443
 
       - name: Checkout & Authentication
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -64,7 +64,7 @@ jobs:
 
       # More info: https://github.com/actions/checkout.
       - name: Checkout & Authentication
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           token: ${{ steps.get_token.outputs.token }}
           persist-credentials: false
@@ -102,7 +102,7 @@ jobs:
 
       # More info: https://github.com/actions/checkout.
       - name: Checkout & Authentication
-        uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           token: ${{ steps.get_token.outputs.token }}
           persist-credentials: false
