@@ -30,8 +30,8 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2
       sort-package-json:
-        specifier: ^2.13.0
-        version: 2.13.0
+        specifier: ^2.14.0
+        version: 2.14.0
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
@@ -79,8 +79,8 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2
       sort-package-json:
-        specifier: ^2.13.0
-        version: 2.13.0
+        specifier: ^2.14.0
+        version: 2.14.0
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
@@ -101,8 +101,8 @@ importers:
         specifier: ^8.3.6
         version: 8.3.6
       sort-package-json:
-        specifier: ^2.13.0
-        version: 2.13.0
+        specifier: ^2.14.0
+        version: 2.14.0
 
 packages:
 
@@ -4009,8 +4009,8 @@ packages:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
     dev: true
 
-  /sort-package-json@2.13.0:
-    resolution: {integrity: sha512-y1iCgJ+ZrOSgkzuhtpaxxsCLeUPZbEbIxcMDBde6JwpkZ3e9vVQhZ46iCD97GYImdgBLtXSPxxS9LqZbL6Th2Q==}
+  /sort-package-json@2.14.0:
+    resolution: {integrity: sha512-xBRdmMjFB/KW3l51mP31dhlaiFmqkHLfWTfZAno8prb/wbDxwBPWFpxB16GZbiPbYr3wL41H8Kx22QIDWRe8WQ==}
     hasBin: true
     dependencies:
       detect-indent: 7.0.1
