@@ -12,8 +12,8 @@ importers:
         specifier: ^18.19.129
         version: 18.19.129
       '@types/rimraf':
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: ^4.0.5
+        version: 4.0.5
       eslint:
         specifier: ^8.57.1
         version: 8.57.1
@@ -443,23 +443,12 @@ packages:
     dev: false
     optional: true
 
-  /@types/glob@8.0.0:
-    resolution: {integrity: sha512-l6NQsDDyQUVeoTynNpC9uRvCUint/gSUXQA2euwmTuWGvPY5LSDUu6tkCtJB2SvGQlJQzLaKqcGZP4//7EDveA==}
-    dependencies:
-      '@types/minimatch': 5.1.2
-      '@types/node': 18.19.129
-    dev: true
-
   /@types/json-schema@7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
-    dev: true
-
-  /@types/minimatch@5.1.2:
-    resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
     dev: true
 
   /@types/minimist@1.2.2:
@@ -487,11 +476,11 @@ packages:
     dev: false
     optional: true
 
-  /@types/rimraf@3.0.2:
-    resolution: {integrity: sha512-F3OznnSLAUxFrCEu/L5PY8+ny8DtcFRjx7fZZ9bycvXRi3KPTRS9HOitGZwvPg0juRhXFWIeKX58cnX5YqLohQ==}
+  /@types/rimraf@4.0.5:
+    resolution: {integrity: sha512-DTCZoIQotB2SUJnYgrEx43cQIUYOlNZz0AZPbKU4PSLYTUdML5Gox0++z4F9kQocxStrCmRNhi4x5x/UlwtKUA==}
+    deprecated: This is a stub types definition. rimraf provides its own type definitions, so you do not need this installed.
     dependencies:
-      '@types/glob': 8.0.0
-      '@types/node': 18.19.129
+      rimraf: 3.0.2
     dev: true
 
   /@types/semver@7.3.13:
@@ -3654,6 +3643,7 @@ packages:
 
   /rimraf@2.7.1:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     dependencies:
       glob: 7.2.3
