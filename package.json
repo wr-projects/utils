@@ -50,7 +50,7 @@
   "private": true,
   "devDependencies": {
     "@types/node": "^18.19.129",
-    "@types/rimraf": "^3.0.2",
+    "@types/rimraf": "^4.0.5",
     "eslint": "^8.57.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
