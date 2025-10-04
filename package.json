@@ -51,7 +51,7 @@
   "devDependencies": {
     "@types/node": "^18.19.129",
     "@types/rimraf": "^3.0.2",
-    "eslint": "^8.57.1",
+    "eslint": "^9.37.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
     "prettier": "^2.8.8",
