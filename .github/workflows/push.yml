@@ -64,6 +64,6 @@ jobs:
           dependency-snapshot: true
 
       - name: Publish SBOM File
-        uses: anchore/sbom-action/publish-sbom@06e109483e6aa305a2b2395eabae554e51530e1d
+        uses: anchore/sbom-action/publish-sbom@3ad7283483fc7af8ff2b4ea19663c2d5ca935e26
         with:
           sbom-artifact-match: ".*\\.spdx$"
