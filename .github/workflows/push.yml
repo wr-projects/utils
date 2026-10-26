@@ -54,7 +54,7 @@ jobs:
 
       - name: Downloading Syft
         id: syft
-        uses: anchore/sbom-action/download-syft@06e109483e6aa305a2b2395eabae554e51530e1d
+        uses: anchore/sbom-action/download-syft@66cbf4bc1f1c0d2edc94016e65bc221b6bb0ad6c
 
       - name: Generate SBOM file
         uses: anchore/sbom-action@06e109483e6aa305a2b2395eabae554e51530e1d
